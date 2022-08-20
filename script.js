@@ -39,6 +39,7 @@ imgGua.forEach(function(nom) {
 			let i = 0;
 			const waktuMulai = new Date().getTime();
 			const gambarI = ['jempol','telunjuk','kelingking'];
+			const teksRan = ['gajah','orang','semut'];
 
 			setInterval(function() {
 				if (new Date().getTime() - waktuMulai > 1000) {
@@ -46,7 +47,12 @@ imgGua.forEach(function(nom) {
 					return;
 				}
 				imgBot.setAttribute('src', 'img/'+ gambarI[i++] +'.png');
+		
 				if (i == gambarI.length) {
+					i = 0;
+				}
+				teksBot.innerHTML = teksRan[i++];
+				if (i == teksRan.length) {
 					i = 0;
 				}
 			}, 100);
