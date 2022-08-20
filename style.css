@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: sans-serif;
+}
+.container {
+	max-width: 700px;
+	height: 700px;
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+.area-bot, .area-kita {
+	width: 100%;
+	height: 50%;
+	border: 3px solid #222;
+	display: flex;
+}
+.area-bot {
+	background-color: blue;
+	border-radius: 20px 20px 0 0;
+}
+.area-bot .gambar-bot {
+	width: 20%;
+	margin: auto;
+}
+.area-bot img:nth-child(2) {
+	width: 7%;
+	position: absolute;
+	margin: 25px;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+.area-bot h2 {
+	position: absolute;
+	margin: 30px;
+	left: 15%;
+	align-self: center;
+	color: #ddd;
+}
+.area-kita {
+	background-color: orange;
+	border-radius: 0 0 20px 20px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.area-kita img {
+	width: 20%;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.ambil {
+	position: absolute;
+	display: flex;
+	bottom: 5%;
+	width: 40%;
+	justify-content: space-between;
+}
+.ambil button {
+	background-color: blue;
+	color: #eee;
+	padding: 10px 20px;
+	font-weight: bold;
+	background-color: blue;
+	border-radius: 5px;
+}
+.ambil h2 {
+	align-self: center;
+}
+.info {
+	width: 40%;
+	height: 10%;
+	background-color: white;
+	position: absolute;
+	border: 5px solid #222;
+	border-radius: 10px;
+	display: flex;
+}
+.info h2 {
+	text-align: center;
+	margin: auto;
+}
+.gajah, .orang, .semut {
+	transition: 0.3s;
+	border: 4px solid rgba(0,0,0,.0);
+}
+.gajah:hover, .orang:hover, .semut:hover {
+	transform: rotate(30deg);
+	border: 4px solid blue;
+}
+.gajah:active, .orang:active, .semut:active {
+	transform: scale(1.06);
+	transition: 0s;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		max-width: 500px;
+		height: 600px;
+	}
+}
+/* iklan */
+.iklan {
+	position: fixed;
+	width: 600px;
+	height: 400px;
+	background-color: rgba(0,0,0,.7);
+	text-align: center;
+	transform: scale(0);
+	transition: 0.5s;
+	z-index: -99;
+}
+.kotak {
+	width: 30px;
+	height: 30px;
+	margin: 20px auto;
+	border: 2px solid white;
+}
+.kotak.merah {
+	background-color: red;
+}
+.kotak.ijo {
+	background-color: green;
+}
+.kotak.biru {
+	background-color: blue;
+}
+.kotak.hasil {
+	background-color: white;
+}
+.atas, .bg, .bawah {
+	position: absolute;
+}
+.bg {
+	margin: 20px;
+	bottom: 20px;
+	right: 40px;
+	padding: 5px 10px;
+}
+.atas {
+	margin: 25px;
+	bottom: 70px;
+	left: 40px;
+	padding: 5px 10px;
+}
+.bawah {
+	margin: 20px;
+	bottom: 20px;
+	left: 40px;
+	padding: 5px 10px;
+}
+.klos {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 20px;
+}
+.klos span {
+	color: white;
+	cursor: pointer;
+}
+.hasil-warna {
+	background-color: white;
+}
